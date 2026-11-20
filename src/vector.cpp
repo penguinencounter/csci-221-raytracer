@@ -1,6 +1,8 @@
 #include "vector.hpp"
 #include <cmath>
 
+Vector::Vector() : x(0.0), y(0.0), z(0.0) {}
+
 Vector::Vector(float x, float y, float z) : x(x), y(y), z(z){}
 
 Vector Vector::operator+(Vector const &v) const {
