@@ -7,7 +7,7 @@ struct Vector {
 
     Vector();
     Vector(float x, float y, float z);
-    Vector(Vector &v) = default;
+    Vector(Vector const &v) = default;
     Vector(Vector &&v) = default; // I hate C++
 
     float dot(Vector const &v) const;

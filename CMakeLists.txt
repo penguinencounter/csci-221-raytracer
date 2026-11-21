@@ -14,6 +14,8 @@ set(CMAKE_CXX_LINK_FLAGS ${link_flags})
 add_executable(
         main
         main.cpp
-        src/color.hpp src/color.cpp
-        src/vector.hpp src/vector.cpp
+        src/vector.cpp src/vector.hpp
+        src/shape.cpp src/shape.hpp
+        src/ray.cpp src/ray.hpp
+        src/colorv2.cpp src/colorv2.hpp
 )
