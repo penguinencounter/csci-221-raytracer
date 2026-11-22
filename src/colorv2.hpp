@@ -33,7 +33,7 @@ protected:
 struct sRGB;
 struct sRGBf;
 
-struct sRGB : public rgb_impl<uint8_t> {
+struct sRGB : rgb_impl<uint8_t> {
     sRGB(uint8_t r, uint8_t g, uint8_t b);
 
     explicit sRGB(sRGBf const&);
