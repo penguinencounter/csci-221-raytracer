@@ -37,8 +37,11 @@ float Vector::length() const {
     return std::sqrt(this->length_squared());
 }
 
+const float NORMAL_EPSILON = 0.00001f;
+
 bool Vector::is_normal() const {
-    return this->length_squared() == 1;
+    float l = this->length_squared();
+    return l + NORMAL_EPSILON >= 1 && l - NORMAL_EPSILON <= 1;
 }
 
 Vector Vector::normalized() const {
