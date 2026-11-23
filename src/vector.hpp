@@ -7,7 +7,7 @@ struct Vector {
 
     // Constructs a zero vector.
     Vector();
-    Vector(Vector &v) = default;
+    Vector(Vector const &v) = default;
     Vector(Vector &&v) = default; // I hate C++
 
     // Constructs a Vector from x, y, and z components.
