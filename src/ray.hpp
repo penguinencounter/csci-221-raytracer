@@ -8,14 +8,14 @@ struct Ray {
     Vector vel;
 
     // Gets value of t at a point p along the ray.
-    float time_at_point(Vector p) const;
+    [[nodiscard]] float time_at_point(Vector p) const;
 
     // Gets point along the ray at time t.
-    Vector point_at_time(float t) const;
+    [[nodiscard]] Vector point_at_time(float t) const;
 
     // Gets a ray in the same line as this one but at a later time.
-    Ray ray_at_time(float t) const;
+    [[nodiscard]] Ray ray_at_time(float t) const;
 
     // Reflects the ray off of a point on a surface described by the given normal ray.
-    Ray reflect_off(Ray normal) const;
+    [[nodiscard]] Ray reflect_off(const Ray &normal) const;
 };
